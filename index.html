@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Star Wars RPG Game</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+</head>
+
+<body>
+    <!-- Overall Bootstrap grid -->
+
+
+    <!-- Jumbotron with title -->
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container-fluid">
+            <h1 class="display-4"><strong>Star Wars RPG!</strong></h1>
+            <p class="lead">Select your Jedi to start game!</p>
+
+            <!-- Available characters -->
+            <div class="col-lg-12 " id="characters-available">
+                <span class="character-image available-character" id="kylo-ren-character">
+                    <p>Kylo Ren</p>
+                    <img src="assets/images/kren.jpg" alt="Kylo Ren Character" id="kylo-ren-image" style="width: 200px">
+                    <p class="health">120</p>
+                </span>
+
+                <span class="character-image available-character" id="luke-skywalker-character">
+                    <p>Luke Skywalker</p>
+                    <img src="assets/images/lskywalker.jpeg" alt="Luke Skywalker Character" id="luke-skywalker-image"
+                        style="width: 200px">
+                    <p class="health">100</p>
+                </span>
+
+                <span class="character-image available-character" id="rey-character">
+                    <p>Rey</p>
+                    <img src="assets/images/rey.jpg" alt="Rey Character" id="rey-image" style="width: 200px; height: 111px">
+                    <p class="health">150</p>
+                </span>
+
+                <span class="character-image available-character" id="yoda-character">
+                    <p>Yoda</p>
+                    <img src="assets/images/yoda.jpg" alt="Yoda Character" id="yoda-image" style="width: 200px; height: 111px">
+                    <p class="health">180</p>
+                </span>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+
+        <!-- Contents of the game-->
+
+        <!-- Your chosen character -->
+        <div class="col-lg-12" id="chosen-character">
+            <h2>Your Jedi</h2>
+            <p id="cjedi">You selected:</p>
+        </div> <!-- End your chosen character-->
+
+        <!-- Enemies available to attack -->
+        <div class="col-lg-12" id="enemies-available">
+            <h2>Enemies Available To Attack</h2>
+            <p id="senemy">Select an available enemy!</p>
+        </div> <!-- End enemies available to attack -->
+
+        <!-- Fight section -->
+        <div class="col-lg-12" id="fight-section">
+            <h2>Fight Section</h2>
+            <button id="attack">Attack</button>
+        </div> <!-- End fight section -->
+
+        <!-- Defender section -->
+        <div class="col-lg-12" id="defender-section">
+            <h2>Defender</h2>
+        </div> <!-- End defender section -->
+
+        <!-- Game message section -->
+        <div class="col-lg-12" id="message-section">
+            <div id="game-message"></div>
+            <button id="restart">Restart</button>
+        </div> <!-- Game message section -->
+
+    </div>
+
+    
+
+    <script src="assets/javascript/game.js"></script>
+
+</body>
+
+</html>

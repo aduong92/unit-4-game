@@ -1,0 +1,36 @@
+body {
+    color:black;
+    height:100%;
+    width: 100%;
+    text-align:center;
+    font-size: 18px;
+  }
+
+  @media (min-width: 576px){
+.jumbotron {
+    padding: 1rem 0rem;
+}
+  }
+.jumbotron{
+    background: transparent;
+}
+.container{
+    text-align: left;
+}
+
+.character-image {
+	display: inline-block;
+	padding: 0px 20px 0px 20px;
+	margin: 0px 2px 0px 2px;
+	background-color: white;
+	border: solid;
+	border-color: green;
+}
+.character-image p {
+	text-align: center;
+	margin: 0px 2px 0px 2px;
+}
+.character-image p.health {
+	text-align: center;
+	margin: 0px 2px 0px 2px;
+}
