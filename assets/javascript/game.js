@@ -77,7 +77,7 @@ function resetGame() {
   $("#kylo-ren-character").children(".health").html(kyloRen.health);
   $("#luke-skywalker-character").children(".health").html(lukeSkywalker.health);
   $("#rey-character").children(".health").html (rey.health);
-  $("#darth-maul-character").children(".health").html(yoda.health);
+  $("#yoda-character").children(".health").html(yoda.health);
 
   // Reset selected character and enemy-characters
   $(".character-image").removeClass("chosen-character enemy-character defender-character").addClass("available-character");
@@ -128,6 +128,7 @@ $(document).ready(function() {
       // Display the chosen character
       $("#kylo-ren-character").removeClass("available-character").addClass("chosen-character");
       $("#chosen-character").append(this);
+      $("#lead").hide();
       $("#cjedi").show();
       $("#senemy").show();
 
@@ -137,6 +138,7 @@ $(document).ready(function() {
       // User is choosing the defender
       if($("#kylo-ren-character").hasClass("enemy-character")) {
         $("#game-message").empty();
+        $("#lead").hide();
 
         // Set the user's enemy
         initializeDefender(kyloRen
@@ -146,6 +148,7 @@ $(document).ready(function() {
         // Add the character to the defender section
         $("#kylo-ren-character").removeClass("enemy-character").addClass("defender-character");
         $("#defender-section").append(this);
+        $("#lead").hide();
       }
     }
   });
@@ -246,7 +249,7 @@ $(document).ready(function() {
 
         // Set the user's enemy
         initializeDefender(yoda);
-       
+        defenderSelected = true;
 
         // Add the character to the defender section 
         $("#yoda-character").removeClass("enemy-character").addClass("defender-character");
@@ -282,6 +285,8 @@ $(document).ready(function() {
         } else {
           gameOver = true;
           alert("GAME-OVER! PLAY AGAIN!");
+          $("#lead").hide();
+          $("#senemy").hide();
           $("#restart").show();
         }
       } else {
@@ -296,6 +301,8 @@ $(document).ready(function() {
         if (enemiesDefeated === 3) {
           gameOver = true;
          alert("YOU WON!");
+         $("#game-message").hide();
+         $("#senemy").hide();
           $("#restart").show();
         }
       }
