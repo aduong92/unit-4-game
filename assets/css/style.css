@@ -1,23 +1,41 @@
+html{
+    height: 100%;
+}
+
+.background{
+    background-image: url('images/background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: rgba(255, 255, 255, 0.4);
+    background-blend-mode: lighten;
+    height: 100%;
+}
 body {
     color:black;
     height:100%;
     width: 100%;
     text-align:center;
     font-size: 18px;
-    background-image: url(/assets/images/background.jpg);
-    background-size: 100% 100%;
+    background-color: transparent; 
+    font-weight: bold;
   }
 
   @media (min-width: 576px){
 .jumbotron {
     padding: 1rem 0rem;
+    background-color: transparent; 
 }
   }
 .jumbotron{
     background: transparent;
 }
+.lead{
+    font-weight: bold;
+}
 .container{
     text-align: left;
+    background-color: transparent; 
+    color:black;
 }
 
 .character-image {
@@ -26,7 +44,8 @@ body {
 	margin: 0px 2px 0px 2px;
 	background-color: white;
 	border: solid;
-	border-color: green;
+    border-color: green;
+    background-color: transparent; 
 }
 .character-image p {
 	text-align: center;
@@ -34,5 +53,11 @@ body {
 }
 .character-image p.health {
 	text-align: center;
-	margin: 0px 2px 0px 2px;
+    margin: 0px 2px 0px 2px;
+    background-color: transparent; 
+}
+button{
+    background: lightskyblue;
+    color: green;
+    font-weight: bold;
 }
